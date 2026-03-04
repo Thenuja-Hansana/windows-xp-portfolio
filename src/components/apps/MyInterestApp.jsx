@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { asset } from '../../utils/assetPath'
 
 const INTERESTS = [
     {
@@ -6,7 +7,7 @@ const INTERESTS = [
         title: 'Web Technology',
         description: 'Obsessed with how the internet works. From HTTP protocols to WebGL shaders — I explore it all.',
         tags: ['React', 'WebGL', 'PWAs', 'Edge Computing', 'Web3'],
-        icon: '/img/Computer.ico',
+        icon: asset('/img/Computer.ico'),
         topics: [
             { title: 'React & Next.js', desc: 'Building blazing-fast SPAs and SSR apps' },
             { title: 'Edge Computing', desc: 'Exploring Cloudflare Workers & Deno Deploy' },
@@ -17,7 +18,7 @@ const INTERESTS = [
         title: 'UI/UX Design',
         description: 'Beauty and function shouldn\'t be mutually exclusive. I live for that "wow" moment in UI design.',
         tags: ['Figma', 'Motion Design', 'Glassmorphism', 'Design Systems', 'Accessibility'],
-        icon: '/img/Paint.ico',
+        icon: asset('/img/Paint.ico'),
         topics: [
             { title: 'Micro-animations', desc: 'Making interfaces feel alive and responsive' },
             { title: 'Skeuomorphism', desc: 'Retro UI as a design philosophy' },
@@ -28,7 +29,7 @@ const INTERESTS = [
         title: 'Music',
         description: 'Lo-fi hip-hop, jazz, and electronic music fuel my late-night coding sessions.',
         tags: ['Lo-fi', 'Jazz Fusion', 'Electronic', 'Synthwave', 'Ambient'],
-        icon: '/img/music-player.png',
+        icon: asset('/img/music-player.png'),
         topics: [
             { title: 'Lo-fi Beats', desc: 'Perfect background for deep focus coding' },
             { title: 'Synthwave', desc: '80s aesthetic in audio form' },
@@ -39,7 +40,7 @@ const INTERESTS = [
         title: 'Retro Gaming',
         description: 'Huge fan of retro aesthetics — hence this Windows XP portfolio! Gaming taught me about UX before I knew what UX was.',
         tags: ['Windows XP', 'Pixel Art', 'Indie Games', 'Speedrunning', 'Emulation'],
-        icon: '/img/Projects.ico',
+        icon: asset('/img/Projects.ico'),
         topics: [
             { title: 'Windows XP', desc: 'The OS that started my love for computers' },
             { title: 'Pixel Art', desc: 'Tiny canvases with huge expressiveness' },
@@ -69,7 +70,7 @@ export default function MyInterestApp() {
             }}>
                 <div style={{ fontSize: 11, display: 'flex', gap: 12 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-                        <img src="/img/Computer.ico" alt="icon" style={{ width: 16, height: 16 }} />
+                        <img src={asset('/img/Computer.ico')} alt="icon" style={{ width: 16, height: 16 }} />
                         <span>Views</span>
                     </div>
                 </div>

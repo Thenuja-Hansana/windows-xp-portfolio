@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { asset } from '../../utils/assetPath'
 
 export default function AboutMeApp() {
     const [activeTab, setActiveTab] = useState('profile')
@@ -86,7 +87,7 @@ function ProfileTab() {
                     background: '#fff',
                     padding: 2,
                 }}>
-                    <img src="/img/user-profile.png" alt="Thenuja" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <img src={asset('/img/user-profile.png')} alt="Thenuja" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div>
                     <h2 style={{ margin: 0, fontSize: 16, fontWeight: 'bold', color: '#000' }}>Thenuja Hansana</h2>

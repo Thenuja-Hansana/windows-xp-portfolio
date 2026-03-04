@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { asset } from '../utils/assetPath'
 
 const FLAG_SM = (
     <svg width="16" height="16" viewBox="0 0 100 96" style={{ flexShrink: 0 }}>
@@ -23,7 +24,7 @@ export default function StartMenu({ onClose, onOpenApp, onShutdown }) {
                 {/* Header */}
                 <div className="sm-header">
                     <div className="sm-avatar">
-                        <img src="/img/user-profile.png" alt="Thenuja" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                        <img src={asset('/img/user-profile.png')} alt="Thenuja" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                     </div>
                     <div className="sm-username">Thenuja</div>
                 </div>

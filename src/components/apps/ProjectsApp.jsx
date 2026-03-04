@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { asset } from '../../utils/assetPath';
 
 const PROJECTS = [
     {
         id: 1,
         title: "Subscription Management Backend Platform",
-        img: "/project_banner_subscription.png",
+        img: asset("/project_banner_subscription.png"),
         overview: "A production-ready REST API that allows users to manage and track subscriptions securely, featuring authentication, protected routes, and automated workflows.",
         tech: ["Node.js", "Express", "MongoDB", "Mongoose", "JWT Auth", "bcrypt"],
         techColors: ["#68a063", "#888", "#47a248", "#880000", "#d4a017", "#c0392b"],
@@ -29,7 +30,7 @@ const PROJECTS = [
     {
         id: 2,
         title: "Production API Automation & Deployment System",
-        img: "/project_banner_devops.png",
+        img: asset("/project_banner_devops.png"),
         overview: "A deployment focused project where a backend API is containerized and deployed using modern DevOps practices. The workflow includes CI/CD automation and structured production configuration to ensure reliable and consistent releases.",
         tech: ["Git", "GitHub Actions", "Docker", "Kubernetes", "IaC", "Linux"],
         techColors: ["#f05032", "#2088ff", "#0db7ed", "#326ce5", "#7b42bc", "#fcc624"],
@@ -54,7 +55,7 @@ const PROJECTS = [
     {
         id: 3,
         title: "Awwwards-Level Agency Website — Chasien",
-        img: "/project_banner_agency.png",
+        img: asset("/project_banner_agency.png"),
         overview: "A visually dynamic agency website designed to feel interactive and alive. Built using React and powered by GSAP animations, the project focuses on fluid motion, smooth transitions, and immersive scrolling effects to create a premium browsing experience.",
         tech: ["React", "Tailwind CSS", "GSAP", "HTML", "JavaScript", "CSS"],
         techColors: ["#61dafb", "#06b6d4", "#88ce02", "#e34c26", "#f7df1e", "#264de4"],
@@ -76,7 +77,7 @@ const PROJECTS = [
     {
         id: 4,
         title: "Windows XP Retro Portfolio",
-        img: "/project_banner_xp.png",
+        img: asset("/project_banner_xp.png"),
         overview: "An interactive and nostalgic portfolio website designed to painstakingly recreate the classic Windows XP desktop experience. Built using React, this project features functional applications, authentic UI elements, and a fully interactive environment designed to engage visitors with a unique, memorable, and playful presentation of skills and projects.",
         tech: ["React", "Vite", "CSS", "HTML", "JavaScript"],
         techColors: ["#61dafb", "#646cff", "#264de4", "#e34c26", "#f7df1e"],
@@ -98,7 +99,7 @@ const PROJECTS = [
     {
         id: 5,
         title: "Real-Time Stock Market App with Alerts, Charts & AI Insights",
-        img: "/project_banner_stock.png",
+        img: asset("/project_banner_stock.png"),
         overview: "AI-Enhanced Real-Time Stock Market Platform — A full-featured financial web application built with modern frontend and backend technologies, real-time data handling, automated workflows, and intelligent insights.",
         tech: ["Next.js", "Better Auth", "Inngest", "Shadcn UI", "TailwindCSS", "MongoDB", "Nodemailer"],
         techColors: ["#000", "#5c6bc0", "#e91e63", "#333", "#06b6d4", "#47a248", "#ea4335"],

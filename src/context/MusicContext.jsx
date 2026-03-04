@@ -1,23 +1,24 @@
 import React, { createContext, useContext, useRef, useState, useCallback, useEffect } from 'react'
+import { asset } from '../utils/assetPath'
 
 export const TRACKS = [
     {
         id: 0,
         title: 'Just The Two Of Us',
         artist: 'Dollcis',
-        src: '/music/just-the-two-of-us.mp3',
+        src: asset('/music/just-the-two-of-us.mp3'),
     },
     {
         id: 1,
         title: 'Smooth Operator',
         artist: 'Sade',
-        src: '/music/smooth-operator.mp3',
+        src: asset('/music/smooth-operator.mp3'),
     },
     {
         id: 2,
         title: 'Borderline',
         artist: 'Tame Impala',
-        src: '/music/borderline.mp3',
+        src: asset('/music/borderline.mp3'),
     },
 ]
 

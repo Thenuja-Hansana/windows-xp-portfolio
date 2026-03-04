@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { asset } from '../utils/assetPath'
 
 // ─── Main LoginScreen ─────────────────────────────────────────────────────────
 export default function LoginScreen({ onLogin }) {
@@ -18,7 +19,7 @@ export default function LoginScreen({ onLogin }) {
             {/* ── TOP BAR ── */}
             <div className="ls-top-bar">
                 <div className="ls-top-logo-row">
-                    <img src="/img/windows-xp-logo.png" alt="Windows XP" className="ls-top-xp-img" />
+                    <img src={asset('/img/windows-xp-logo.png')} alt="Windows XP" className="ls-top-xp-img" />
                     <span className="ls-top-windows">Windows</span>
                     <span className="ls-top-xp">XP</span>
                 </div>
@@ -29,7 +30,7 @@ export default function LoginScreen({ onLogin }) {
                 {/* LEFT PANEL */}
                 <div className="ls-left">
                     <div className="ls-left-logo">
-                        <img src="/img/windows-xp-logo.png" alt="Windows XP Logo" className="ls-left-xp-img" />
+                        <img src={asset('/img/windows-xp-logo.png')} alt="Windows XP Logo" className="ls-left-xp-img" />
                         <div className="ls-left-brand">
                             <span className="ls-brand-name">Thenuja</span>
                             <span className="ls-brand-xp">xp</span>
@@ -49,7 +50,7 @@ export default function LoginScreen({ onLogin }) {
                     {clicked ? (
                         <div className="ls-welcome-tile">
                             <div className="ls-welcome-avatar">
-                                <img src="/img/user-profile.png" alt="Thenuja" className="ls-welcome-avatar-img" />
+                                <img src={asset('/img/user-profile.png')} alt="Thenuja" className="ls-welcome-avatar-img" />
                             </div>
                             <div className="ls-welcome-name">Welcome, Thenuja</div>
                             <div className="ls-welcome-sub">Loading your personal settings…</div>
@@ -57,7 +58,7 @@ export default function LoginScreen({ onLogin }) {
                     ) : (
                         <div className="ls-user-tile" onClick={handleProfile}>
                             <div className="ls-avatar">
-                                <img src="/img/user-profile.png" alt="Thenuja" className="ls-avatar-img" />
+                                <img src={asset('/img/user-profile.png')} alt="Thenuja" className="ls-avatar-img" />
                             </div>
                             <div className="ls-tile-info">
                                 <div className="ls-tile-name">Thenuja</div>

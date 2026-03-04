@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { asset } from '../utils/assetPath'
 
 export default function BootScreen({ onDone }) {
     const [fadeOut, setFadeOut] = useState(false)
@@ -17,7 +18,7 @@ export default function BootScreen({ onDone }) {
             {/* Center logo */}
             <div className="boot-logo">
                 <img
-                    src="/img/windows-xp-logo.png"
+                    src={asset('/img/windows-xp-logo.png')}
                     alt="Windows XP Logo"
                     className="boot-xp-logo-img"
                 />

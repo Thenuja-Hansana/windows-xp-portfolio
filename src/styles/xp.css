@@ -207,7 +207,6 @@ body,
 #desktop {
     position: fixed;
     inset: 0;
-    background: url('/img/wallpaper.jpg') center/cover no-repeat;
     overflow: hidden;
     z-index: 1;
     opacity: 0;

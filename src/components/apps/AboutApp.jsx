@@ -1,10 +1,12 @@
+import { asset } from '../../utils/assetPath'
+
 export default function AboutApp() {
     return (
         <div style={{ display: 'flex', flexDirection: 'column', height: '100%', backgroundColor: '#ECE9D8' }}>
             {/* Toolbar for download */}
             <div style={{ display: 'flex', padding: '6px 10px', background: 'linear-gradient(to bottom, #F5F4EA 0%, #EBE9D7 100%)', borderBottom: '1px solid #c0c0c0', alignItems: 'center' }}>
                 <a
-                    href="/img/thenuja_cv_hansana.pdf"
+                    href={asset('/img/thenuja_cv_hansana.pdf')}
                     download="Thenuja_Hansana_CV.pdf"
                     style={{
                         display: 'flex', alignItems: 'center', gap: 6,
@@ -28,7 +30,7 @@ export default function AboutApp() {
             {/* PDF Viewer */}
             <div style={{ flex: 1, backgroundColor: '#fff', borderTop: '1px solid #fff' }}>
                 <iframe
-                    src="/img/thenuja_cv_hansana.pdf#toolbar=0"
+                    src={asset('/img/thenuja_cv_hansana.pdf#toolbar=0')}
                     title="Resume PDF"
                     style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}
                 />

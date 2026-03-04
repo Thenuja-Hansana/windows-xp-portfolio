@@ -6,17 +6,18 @@ import XPWindow from './XPWindow'
 import Taskbar from './Taskbar'
 import ContextMenu from './ContextMenu'
 import ShutdownDialog from './ShutdownDialog'
+import { asset } from '../utils/assetPath'
 
 // ─── Desktop icon definitions — using windows-xp-desktop images ──────────────
 const DESKTOP_ICONS = [
-    { appId: 'mycomputer', label: 'My Computer', icon: '/img/My computer.ico' },
-    { appId: 'about', label: 'Resume', icon: '/img/Resume.ico' },
-    { appId: 'projects', label: 'My Projects', icon: '/img/Projects.ico' },
-    { appId: 'skills', label: 'Skills', icon: '/img/skills.ico' },
-    { appId: 'contact', label: 'Contact', icon: '/img/Social.ico' },
-    { appId: 'mediaplayer', label: 'Media Player', icon: '/img/music-player.png' },
-    { appId: 'paint', label: 'Paint', icon: '/img/Paint.ico' },
-    { appId: 'recycle', label: 'Recycle Bin', icon: '/img/Recycle Bin.ico' },
+    { appId: 'mycomputer', label: 'My Computer', icon: asset('/img/My computer.ico') },
+    { appId: 'about', label: 'Resume', icon: asset('/img/Resume.ico') },
+    { appId: 'projects', label: 'My Projects', icon: asset('/img/Projects.ico') },
+    { appId: 'skills', label: 'Skills', icon: asset('/img/skills.ico') },
+    { appId: 'contact', label: 'Contact', icon: asset('/img/Social.ico') },
+    { appId: 'mediaplayer', label: 'Media Player', icon: asset('/img/music-player.png') },
+    { appId: 'paint', label: 'Paint', icon: asset('/img/Paint.ico') },
+    { appId: 'recycle', label: 'Recycle Bin', icon: asset('/img/Recycle Bin.ico') },
 ]
 
 // ─── Desktop component ───────────────────────────────────────────────────────
@@ -35,7 +36,7 @@ export default function Desktop({ visible }) {
         if (visible && !soundPlayedRef.current) {
             soundPlayedRef.current = true
             try {
-                const audio = new Audio('/music/start-sound.mpeg')
+                const audio = new Audio(asset('/music/start-sound.mpeg'))
                 audio.volume = 0.8
                 audio.play().catch(() => { })
             } catch (e) { }
@@ -111,6 +112,7 @@ export default function Desktop({ visible }) {
         <div
             id="desktop"
             className={visible ? 'visible' : ''}
+            style={{ backgroundImage: `url(${asset('/img/wallpaper.jpg')})`, backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
             onClick={handleDesktopClick}
             onContextMenu={handleContextMenu}
         >

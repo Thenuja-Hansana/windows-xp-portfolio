@@ -4,6 +4,7 @@ import { useWindowManager } from '../context/WindowContext'
 import { useMusic } from '../context/MusicContext'
 import { APPS_CONFIG } from '../data/appsConfig'
 import StartMenu from './StartMenu'
+import { asset } from '../utils/assetPath'
 
 
 export default function Taskbar({ onShowDesktop, onBalloon, onShutdown }) {
@@ -83,7 +84,7 @@ export default function Taskbar({ onShowDesktop, onBalloon, onShutdown }) {
             <div id="taskbar">
                 {/* Start button */}
                 <button id="start-btn" aria-label="Start" onClick={toggleStart}>
-                    <img src="/img/windows-xp-logo.png" alt="XP" style={{ width: 22, height: 22, objectFit: 'contain', flexShrink: 0 }} />
+                    <img src={asset('/img/windows-xp-logo.png')} alt="XP" style={{ width: 22, height: 22, objectFit: 'contain', flexShrink: 0 }} />
                     <span>start</span>
                 </button>
 
