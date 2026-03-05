@@ -90,30 +90,33 @@ const PROJECTS = [
         ],
         designApproach: "The project demonstrates a meticulous attention to detail in replicating the classic Windows XP aesthetic, blending nostalgic design with modern web technologies. Interactions, sounds, and visual elements are carefully crafted to provide an immersive user experience while effectively and creatively showcasing professional work and capabilities.",
         links: [
-            { label: 'GitHub', url: '#', icon: '🐙' },
-            { label: 'Live Site', url: '#', icon: '🌐' },
+            { label: 'GitHub', url: 'https://github.com/Thenuja-Hansana/windows-xp-portfolio', icon: '🐙' },
+            { label: 'Live Site', url: 'https://thenujahansana.dev/', icon: '🌐' },
         ],
         category: "Full Stack",
         categoryColor: "#00695c",
     },
     {
         id: 5,
-        title: "Real-Time Stock Market App with Alerts, Charts & AI Insights",
-        img: asset("/project_banner_stock.png"),
-        overview: "AI-Enhanced Real-Time Stock Market Platform — A full-featured financial web application built with modern frontend and backend technologies, real-time data handling, automated workflows, and intelligent insights.",
-        tech: ["Next.js", "Better Auth", "Inngest", "Shadcn UI", "TailwindCSS", "MongoDB", "Nodemailer"],
-        techColors: ["#000", "#5c6bc0", "#e91e63", "#333", "#06b6d4", "#47a248", "#ea4335"],
+        title: "Reqruita (SDGP) - Anti Cheating Interview Platform",
+        img: asset("/project_banner_requita.png"),
+        overview: "Building a Secure Interview platform to prevent candidates from cheating in their online interviews with a dashboard integrated for the HR team and for the interviewer to monitor, manage and evaluate candidates in real time.",
+        tech: ["Electron.js", "React", "Node.js", "Express.js", "WebRTC", "CSS"],
+        techColors: ["#47848F", "#61dafb", "#68a063", "#888", "#23ce6b", "#264de4"],
         architecture: [
-            { icon: "🖥️", label: "User Interface", desc: "React + Next.js frontend" },
-            { icon: "🔗", label: "API Routes", desc: "Next.js backend endpoints" },
-            { icon: "📈", label: "Real-Time Data", desc: "Live fetch from Stock API" },
-            { icon: "⚡", label: "Inngest Workflows", desc: "Background event processing" },
-            { icon: "🔔", label: "Alerts / AI", desc: "AI Summaries & Email Notifications" },
-            { icon: "💾", label: "Database", desc: "User watchlists, alerts, stock data" },
+            { icon: "🛡️", label: "Security Gate", desc: "Hardware validation before entry" },
+            { icon: "🐚", label: "Electron Shell", desc: "Desktop locking & environment isolation" },
+            { icon: "🌉", label: "IPC Bridge", desc: "Secure communication between processes" },
+            { icon: "🎥", label: "WebRTC Engine", desc: "Real-time monitoring & screen sharing" },
+            { icon: "📊", label: "HR Dashboard", desc: "Management & evaluation interface" },
         ],
-        links: [{ label: 'GitHub', url: '#', icon: '🐙' }],
+        flow: "Validation → Environment Locking → Real-time Monitoring → Secure Evaluation",
+        links: [
+            { label: 'GitHub', url: 'https://github.com/Thenuja-Hansana/Reqruita-CS80', icon: '🐙' },
+            { label: 'Live Site', url: 'https://reqruita.com/', icon: '🌐' },
+        ],
         category: "Full Stack",
-        categoryColor: "#e65100",
+        categoryColor: "#1a5fa8",
     },
 ];
 
@@ -154,7 +157,7 @@ function ProjectCard({ p }) {
                 </div>
 
                 {/* Read More toggle */}
-                {!expanded && (
+                {!expanded && (p.architecture || p.flow || p.animationInfo || p.designApproach || p.security || (p.links && p.links.length > 0)) && (
                     <button className="proj-readmore-btn" onClick={() => setExpanded(true)}>
                         ▼ Read More...
                     </button>
@@ -302,6 +305,7 @@ export default function ProjectsApp({ contentReady }) {
                     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
                     gap: 16px;
                     align-content: start;
+                    align-items: start;
                 }
 
                 /* ── Card ── */

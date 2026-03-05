@@ -14,7 +14,6 @@ export default function MyComputerApp({ contentReady }) {
             <div className={`xp-content xp-content-reveal ${contentReady ? 'xp-content-visible' : ''}`}>
                 <Section title="Files Stored on This Computer">
                     <DriveItem icon={<img src={asset('/img/Projects.ico')} alt="folder" style={{ width: 28, height: 28, display: 'block' }} />} label="About me" onClick={() => openOnClick('aboutme')} onDoubleClick={() => openOnDblClick('aboutme')} />
-                    <DriveItem icon={<img src={asset('/img/Projects.ico')} alt="folder" style={{ width: 28, height: 28, display: 'block' }} />} label="Experience" onClick={() => openOnClick('myinterest')} onDoubleClick={() => openOnDblClick('myinterest')} />
                 </Section>
                 <Section title="Hard Disk Drives">
                     <DriveItemFull icon="💿" label="Local Disk (C:)" pct={62} free="59.8 GB" total="160 GB" />
